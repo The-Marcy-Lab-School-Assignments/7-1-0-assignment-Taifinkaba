@@ -40,6 +40,7 @@ const PokemonProvider = ({ children }) => {
                 return;
             }
             setAllPokemon(data);
+            console.log(allPokemon)
         };
         // console
         console.log(allPokemon);
