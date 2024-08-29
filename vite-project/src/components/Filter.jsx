@@ -19,25 +19,13 @@ const Filter = () => {
         <div>
             <div className="ui search">
                 <div className="ui icon input">
-                    <input
-                        className="prompt"
-                        placeholder="Search by Name..."
-                        value={searchTerm}
-                        onChange={handleSearchChange}
-                    />
+                    <input className="prompt" placeholder="Search by Name..." value={searchTerm} onChange={handleSearchChange} />
                     <i className="search icon" />
                 </div>
             </div>
             <div className="ui six cards">
                 {filteredPokemon.map(pokemon => (
-                    <PokemonCard
-                        key={pokemon.id}
-                        id={pokemon.id}
-                        name={pokemon.name}
-                        frontImage={pokemon.front}
-                        backImage={pokemon.back}
-                        hp={pokemon.hp}
-                    />
+                    <PokemonCard key={pokemon.id} id={pokemon.id} name={pokemon.name} frontImage={pokemon.front} backImage={pokemon.back} hp={pokemon.hp} />
                 ))}
             </div>
         </div>

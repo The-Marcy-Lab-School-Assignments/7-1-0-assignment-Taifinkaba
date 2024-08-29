@@ -14,13 +14,7 @@ const PokemonCollection = () => {
     return (
         <div className="ui six cards">
             {allPokemon?.map(pokemon => (
-                <PokemonCard 
-                    key={pokemon.id}
-                    id={pokemon.id}
-                    name={pokemon.name}
-                    image={pokemon.image}
-                    hp={pokemon.hp}
-                />
+                <PokemonCard key={pokemon.id} id={pokemon.id} name={pokemon.name} image={pokemon.image} hp={pokemon.hp} />
             ))}
         </div>
     );
