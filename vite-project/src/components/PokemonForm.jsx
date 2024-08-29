@@ -1,7 +1,47 @@
-import React from "react"
-
+import React, {useState, useContext} from "react"
+import PokemonContext from "../context/PokemonContext"
+import handleFetch from "../utils/handleFetch"
 
 const PokemonForm = () => {
+    const {allPokemon, setAllPokemon} = useContext(PokemonContext)
+
+    const {formData, setFormData} = useState({
+        name: '',
+        hp: '',
+        font:'',
+        back:  ''
+    })
+
+    const handleChange = (e) =>{
+        const {name, value} = e.target
+
+        setFormData((prevData)=({
+            ...prevData,
+            [name]:value
+        }))
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault(); 
+
+        await fetch('http://localhost:4000/pokemon', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        setAllPokemon([...allPokemon, formData]);
+
+        setFormData({
+            name: '',
+            hp: '',
+            front: '',
+            back: ''
+        });
+    };
+
     return (
         <div>
             <h3>Add a Pokemon!</h3>
