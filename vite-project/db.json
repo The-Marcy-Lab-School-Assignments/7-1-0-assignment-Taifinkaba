@@ -83,6 +83,28 @@
       "hp": 60,
       "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
       "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"
+    },
+    {
+      "name": "",
+      "hp": "",
+      "font": "",
+      "back": "",
+      "id": 13
+    },
+    {
+      "name": "",
+      "hp": "",
+      "font": "",
+      "back": "",
+      "id": 14
+    },
+    {
+      "name": "Weedle",
+      "hp": "20",
+      "font": "",
+      "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png",
+      "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+      "id": 15
     }
   ]
 }
