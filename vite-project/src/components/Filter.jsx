@@ -1,3 +1,6 @@
+import React, {useState, useContext} from "react"
+
+
 // TODO: Make this a controlled component. On each stroke of the key, it should filter the displayed pokemon
 
 const Filter = () => {
