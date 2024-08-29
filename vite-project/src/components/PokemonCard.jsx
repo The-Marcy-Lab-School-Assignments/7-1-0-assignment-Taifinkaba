@@ -1,19 +1,13 @@
 // TODO: This component should render a single pokemon's stats and image.
-import React, { useState } from 'react';
+import React from 'react';
 
-const PokemonCard = ({ id, name, frontImage, backImage, hp }) => {
-    const [showFront, setShowFront] = useState(true);
-
-    const toggleImage = () => {
-        setShowFront(prevShowFront => !prevShowFront);
-    };
-
+const PokemonCard = ({ name, frontImage, hp }) => {
     return (
-        <div className="ui card" onClick={toggleImage}>
+        <div className="ui card">
             <div className="image">
                 <img
                     alt={name}
-                    src={showFront ? frontImage : backImage}
+                    src={frontImage}
                 />
             </div>
             <div className="content">
